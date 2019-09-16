@@ -27,7 +27,7 @@ class Game
     public function display() {
         echo '<ul>';        
         foreach ($this->nest as $wasp){
-            echo "<li style=''>{$wasp->type} ({$wasp->hitPoints})</li>";
+            echo "<li style=\"color:", ($wasp->isAlive()) ? "inherit" : "red" , "\">{$wasp->type} ({$wasp->hitPoints})</li>";
         }
         echo '</ul>';
         if ($this->getAliveWasps() == null) {
